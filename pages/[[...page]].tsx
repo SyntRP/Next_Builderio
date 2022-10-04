@@ -3,9 +3,11 @@ import { useRouter } from "next/router";
 import { BuilderComponent, builder, useIsPreviewing } from "@builder.io/react";
 import DefaultErrorPage from "next/error";
 import Head from "next/head";
+import "../components/heading";
 
 // put your Public API Key you copied from Builder.io here
-builder.init(process.env.BUILDER_API_KEY as string);
+const BUILDER_API_KEY = "92635d13550a4beb86918f39452d449e";
+builder.init(BUILDER_API_KEY);
 
 export async function getStaticProps({
   params,
